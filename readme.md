@@ -26,10 +26,7 @@ go run main.go
 ```
 
 ## Features
-List the key features of your project. What makes it stand out?
-- Feature 1
-- Feature 2
-- Feature 3
+---
 
 ## Contributing
 Contributing Guidelines:
