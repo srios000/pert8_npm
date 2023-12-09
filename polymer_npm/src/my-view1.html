@@ -14,14 +14,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-view1">
-  <template>
-    <style include="shared-styles">
+    <template>
+      <style include="shared-styles">
       :host {
         display: block;
 
         padding: 10px;
       }
-  /*      input [type=text], [type=email], [type=password], select, TextArea{
+/*      input [type=text], [type=email], [type=password], select, TextArea{
         width: 100%;
         padding: 12px 20px;
         margin: 8px 0;
@@ -68,54 +68,29 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <center>
       <h1>Daftar Nama Mahasiswa Kursus Lepkom</h1>
     </center>
-      
+    
     <!--TODO: membuat template berjenis dom-repeat untuk menampilkan data mahasiswa-->
-    <template is="dom-repeat" items="[[data]]">
-      <div class="card">
-        <div class="circle">[[computeIndex(index)]]</div>
-        <img src="[[item.foto_mahasiswa]]" alt="gambar" class="gambar">
-        <p>Nama: [[item.nama_mahasiswa]]</p>
-        <p>Kursus: [[item.kursus_mahasiswa]]</p>
-      </div>
+
+    <!--TODO: membuat iron-ajax untuk mengambil data dari API-->
+
+
+    </div>
     </template>
 
-      <!--TODO: membuat iron-ajax untuk mengambil data dari API-->
-    <iron-ajax
-      auto
-      url="/api/mahasiswa"
-      handle-as="json"
-      method="GET"
-      on-response="_handleResponse"
-      debounce-duration="300">
-    </iron-ajax>
-  </template>
+    <script>
+      class MyView1 extends Polymer.Element {
+        static get is() {
+            return 'my-view1';
+        }
+        // TODO: membuat fungsi untuk menghitung index berdasarkan jumlah data dengan computed property
 
-  <script>
-    class MyView1 extends Polymer.Element {
-      static get is() {
-          return 'my-view1';
+        /* TODO: mendefinisikan sebuah properti bernama data sebagai objek (type: Object) dan
+        dikonfigurasi untuk mengirim event ketika nilainya berubah (notify: true).  */
+
+        
+        // TODO: membuat fungsi untuk menangani data yang diterima dari API dan memperbarui nilai properti data
+        // nama fungsi: _handleResponse dengan parameter event.
       }
-      // TODO: membuat fungsi untuk menghitung index berdasarkan jumlah data dengan computed property
-      computeIndex(index){
-        return index + 1;
-      }
-      /* TODO: mendefinisikan sebuah properti bernama data sebagai objek (type: Object) dan
-      dikonfigurasi untuk mengirim event ketika nilainya berubah (notify: true).  */
-      static get properties(){
-        return  {
-          data: {
-            type: Object,
-            notify: true,
-          },
-        };
-      }
-      
-      // TODO: membuat fungsi untuk menangani data yang diterima dari API dan memperbarui nilai properti data
-      // nama fungsi: _handleResponse dengan parameter event.
-      _handleResponse(e)  {
-        this.data = e.detail.response;
-      }
-    }
-    window.customElements.define(MyView1.is, MyView1);
-  </script>
+      window.customElements.define(MyView1.is, MyView1);
+    </script>
 </dom-module>
