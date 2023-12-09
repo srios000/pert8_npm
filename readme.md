@@ -1,7 +1,7 @@
 # Project Title
 
 ## Introduction
-A brief introduction to your project. Explain what your project does and what makes it unique or interesting.
+This is a project for pert8 of Golang for Beginner.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -12,7 +12,7 @@ A brief introduction to your project. Explain what your project does and what ma
 - [Contact](#contact)
 
 ## Installation
-Provide step-by-step instructions on how to get a development environment running.
+How to add the project to your local repository
 
 ```bash
 git clone https://github.com/srios000/pert8_npm.git
@@ -20,11 +20,9 @@ cd pert8_npm
 ```
 
 ## Usage
-Explain how to use your project after installation. Include code samples, screenshots, or video links to make this section more engaging.
+```bash
+go run main.go
 
-```javascript
-// Example code snippet
-console.log('Hello, World!');
 ```
 
 ## Features
@@ -34,8 +32,7 @@ List the key features of your project. What makes it stand out?
 - Feature 3
 
 ## Contributing
-Encourage others to contribute to your project. Provide guidelines on how they can do so.
-
+Contributing Guidelines:
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
@@ -43,8 +40,6 @@ Encourage others to contribute to your project. Provide guidelines on how they c
 5. Open a Pull Request
 
 ## License
-Include a section about your project's license. 
-
 `This project is licensed under the [LICENSE NAME] - see the LICENSE.md file for details`
 
 
